@@ -144,6 +144,7 @@ function createApp(config) {
       gutil.log(gutil.colors.green('Serving'), gutil.colors.cyan(p));
       var body = files[p].contents;
       res.setHeader('Content-Type', mime.lookup(p) + '; charset=utf-8');
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.write(body);
       res.end();
     } else {

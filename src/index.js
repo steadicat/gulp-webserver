@@ -130,7 +130,7 @@ function createApp(config) {
           res.write('<h4>'+dir+'</h4>');
           lastDir = dir;
         }
-        res.write('<div style="margin-left: 5%; position: relative;"><a style="text-decoration:none" href="'+p+'">'+base+'</a> <span style="color: #999; font-size: 12px; position: absolute; right: 0; top: 4px">'+readablizeBytes(files[p].contents.toString().length)+'</span></div>');
+        res.write('<div style="margin-left: 5%; position: relative;"><a style="text-decoration:none" href="'+p+'">'+base+'</a> <span style="color: #999; font-size: 12px; position: absolute; right: 0; top: 2px">'+readablizeBytes(files[p].contents.toString().length)+'</span></div>');
       });
       res.write('</div></html>');
       res.end();
@@ -141,7 +141,7 @@ function createApp(config) {
   app.use(function(req, res) {
     var p = url.parse(req.url).pathname;
     if (files[p]) {
-      gutil.log(gutil.colors.green('Serving'), gutil.colors.cyan(p));
+      //gutil.log(gutil.colors.green('Serving'), gutil.colors.cyan(p));
       var body = files[p].contents;
       res.setHeader('Content-Type', mime.lookup(p) + '; charset=utf-8');
       res.setHeader('Access-Control-Allow-Origin', '*');
@@ -182,7 +182,7 @@ module.exports = function(options) {
     }
 
     var url = '/' + path.relative(file.base, file.path);
-    gutil.log(gutil.colors.magenta('Updating'), gutil.colors.cyan(url));
+    //gutil.log(gutil.colors.magenta('Updating'), gutil.colors.cyan(url));
     files[url] = file;
 
     if (config.fallback) {

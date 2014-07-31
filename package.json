@@ -1,6 +1,6 @@
 {
   "name": "gulp-webserver",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Gulp plugin to run a local webserver with LiveReload",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/schickling/gulp-webserver.git"
+    "url": "https://github.com/steadicat/gulp-webserver.git"
   },
   "keywords": [
     "gulpplugin",
@@ -16,12 +16,11 @@
     "connect",
     "livereload"
   ],
-  "author": "Johannes Schickling <schickling.j@gmail.com> (https://github.com/schickling)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/schickling/gulp-webserver/issues"
+    "url": "https://github.com/steadicat/gulp-webserver/issues"
   },
-  "homepage": "https://github.com/schickling/gulp-webserver",
+  "homepage": "https://github.com/steadicat/gulp-webserver",
   "devDependencies": {
     "mocha": "^1.20.1",
     "supertest": "^0.13.0"
